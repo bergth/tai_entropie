@@ -9,4 +9,4 @@ typedef std::chrono::milliseconds ms;
 typedef std::chrono::duration<float> fsec;
 
 //int test(est_premier f, int a, int b);
-void test_multiples(std::vector<est_premier> funcs, int a, int b, int n);
+void test_multiples(std::vector<est_premier> funcs, bigint a, bigint b, int n);

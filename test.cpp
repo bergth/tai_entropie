@@ -15,12 +15,12 @@ using namespace std;
 }*/
 
 
-void test_multiples(vector<est_premier> funcs, int a, int b, int n)
+void test_multiples(vector<est_premier> funcs, bigint a, bigint b, int n)
 {
 
     vector<long int> nbs;
     std::default_random_engine re(42);
-    std::uniform_int_distribution<long int> distrib {a,b};
+    std::uniform_int_distribution<long int> distrib {(long int)a,(long int)b};
     for(int i = 0; i < n; i++)
     {
         nbs.push_back(distrib(re));
