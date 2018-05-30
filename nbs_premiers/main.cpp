@@ -6,7 +6,16 @@ using namespace std;
 
 int main()
 {
-    vector<est_premier> funcs = {naive, naive_2, naive_3, naive_4, fermat_5, fermat_10, fermat_20, fermat_40};
+    // a = 10^7 b = 10^8 nb = 500
+    //test_multiples({naive,naive_2,naive_3,naive_4},10000000,100000000,500);
+
+    // a = 10^9 b = 10^10 n = 7*10^5
+    //test_multiples({naive_4,fermat_5},1000000000,10000000000,700000);
+
+
+    test_multiples({naive_4,fermat_5,fermat_20},1000000000,10000000000,10000);
+
+    /*vector<est_premier> funcs = {naive, naive_2, naive_3, naive_4, fermat_5, fermat_10, fermat_20, fermat_40};
     vector<est_premier> f_to_test;
     string in = "";
     int val = 0;
@@ -57,6 +66,6 @@ int main()
     cout << "a: " << a << endl;
     cout << "b: " << b << endl;
     cout << "nb: " << nb_pr << endl;
-    test_multiples(f_to_test,a,b,nb_pr);
+    test_multiples(f_to_test,a,b,nb_pr);*/
 }
 
