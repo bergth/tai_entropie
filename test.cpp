@@ -19,7 +19,7 @@ void test_multiples(vector<est_premier> funcs, bigint a, bigint b, int n)
 {
 
     vector<bigint> nbs;
-    std::default_random_engine re(42);
+    std::default_random_engine re(time(NULL));
     std::uniform_int_distribution<bigint> distrib {a,b};
     for(int i = 0; i < n; i++)
     {

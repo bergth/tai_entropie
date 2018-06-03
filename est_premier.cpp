@@ -11,7 +11,7 @@ using namespace std;
 
 
 
-
+// on calcul ici a^(n-1) % n
 bigint power(bigint a, bigint n)
 {
     //cout << "n:" << n << endl;
@@ -100,19 +100,10 @@ bool fermat(bigint n, int k)
         return true;
 
 
-    /*std::random_device rd;
-    std::mt19937_64 eng(rd());
-    std::uniform_int_distribution<bigint> distr;*/
-
-
     for(int i = 0; i < k; i++)
     {
-        bigint tmp = (float)(rand()/(float)RAND_MAX) * ULLONG_MAX + rand();
-        //cout << tmp << endl;
-        bigint a = 2 + tmp % (n-4);
-        //cout << a << endl;
-
-        if(power(a,n) != 1)
+        bigint a = 2 + rand() % (n-4);
+        if(power(a,n) != 1) // théorème de fermat
         {
             return false;
         }
